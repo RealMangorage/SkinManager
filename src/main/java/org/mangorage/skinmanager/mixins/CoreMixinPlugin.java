@@ -15,7 +15,7 @@ public class CoreMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
-
+        System.out.println("TEST!");
     }
 
     @Override
@@ -30,7 +30,7 @@ public class CoreMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void acceptTargets(Set<String> myTargets, Set<String> otherTargets) {
-
+        System.out.println("TEST!");
     }
 
     @Override
@@ -40,11 +40,11 @@ public class CoreMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void preApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
-
+        System.out.println("TEST!");
     }
 
     @Override
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
-
+        System.out.println("TEST!");
     }
 }

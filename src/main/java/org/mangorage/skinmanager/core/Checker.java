@@ -1,4 +1,4 @@
-package org.mangorage.skinmanager;
+package org.mangorage.skinmanager.core;
 
 import com.google.common.collect.Iterables;
 import com.google.gson.Gson;
@@ -10,7 +10,6 @@ import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.mojang.authlib.minecraft.MinecraftSessionService;
 import com.mojang.authlib.properties.Property;
 import com.mojang.authlib.yggdrasil.TextureUrlChecker;
-import com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService;
 import com.mojang.authlib.yggdrasil.response.MinecraftTexturesPayload;
 import com.mojang.util.UUIDTypeAdapter;
 import org.mangorage.skinmanager.events.TextureUrlCheckEvent;
@@ -28,7 +27,7 @@ public class Checker {
     private static final Gson gson = new GsonBuilder().registerTypeAdapter(UUID.class, new UUIDTypeAdapter()).create();
     public static Map<MinecraftProfileTexture.Type, MinecraftProfileTexture> getTextures(MinecraftSessionService sessionService, final GameProfile profile, final boolean requireSecure) throws InsecurePublicKeyException {
         final Property textureProperty = Iterables.getFirst(profile.getProperties().get("textures"), null);
-
+        LOGGER.warn("Called Checker");
         if (textureProperty == null) {
             return new HashMap<>();
         }

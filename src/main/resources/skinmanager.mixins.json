@@ -4,6 +4,7 @@
   "package": "org.mangorage.skinmanager.mixins",
   "compatibilityLevel": "JAVA_17",
   "plugin": "org.mangorage.skinmanager.mixins.CoreMixinPlugin",
+  "refmap": "skinmanager.mixins.refmap.json",
   "mixins": [
     "SkinManagerMixin"
   ],
